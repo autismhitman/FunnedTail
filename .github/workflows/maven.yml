@@ -67,13 +67,13 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: public/reports/
-        token: ${{ secrets.PAT1234 }}
+        token: ${{ secrets.PAT12345 }}
         clean: true
     - name: Deploy 🚀
       if: always()
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: public/logs/
-        token: ${{ secrets.PAT1234 }}
+        token: ${{ secrets.PAT12345 }}
         clean: true
  
