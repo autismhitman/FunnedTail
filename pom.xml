@@ -13,6 +13,7 @@
         <log4j.version>2.24.3</log4j.version>
         <poi.version>5.4.1</poi.version> 
         <jackson.version>2.19.2</jackson.version>
+        <restassured.version>5.5.5</restassured.version>
   </properties>
   
 <dependencies>
@@ -61,7 +62,11 @@
     <artifactId>jackson-databind</artifactId>
     <version>${jackson.version}</version>
 </dependency>
-
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>${restassured.version}</version>
+</dependency>
 </dependencies>
 <build>
 <plugins>

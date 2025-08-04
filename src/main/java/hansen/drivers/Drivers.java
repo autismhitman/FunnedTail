@@ -9,11 +9,11 @@ import hansen.utils.ConfigLoader;
 public class Drivers {
 	
 	 
-	public static void initDriver() {
+	public static void initDriver(String browser) {
 		if(Objects.isNull(DriverManager.getDriver())) {
 			
-			
-			WebDriver driver =WebDriverFactory.getDriver("edge", true);
+			boolean isRemote = Boolean.parseBoolean(ConfigLoader.getInstance().getProperty("remote"));
+			WebDriver driver =WebDriverFactory.getDriver(browser, isRemote);
 			DriverManager.setDriver(driver);
 			DriverManager.getDriver().manage().window().maximize();
 			System.out.println(ConfigLoader.getInstance().getProperty("url"));

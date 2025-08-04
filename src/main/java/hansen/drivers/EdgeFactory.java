@@ -31,7 +31,7 @@ public class EdgeFactory implements BrowserFactory{
 				try {
 					  EdgeOptions browserOptions = new EdgeOptions();
 					  browserOptions.setPlatformName("Windows 10");
-					  browserOptions.setBrowserVersion("138");
+					  browserOptions.setBrowserVersion("127");
 					  HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 					  ltOptions.put("username", ConfigLoader.getInstance().getProperty("username"));
 					  ltOptions.put("accessKey", ConfigLoader.getInstance().getProperty("accesskey"));

@@ -1,5 +1,7 @@
 package hansen.tests;
 
+import java.util.Map;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -8,10 +10,13 @@ import hansen.drivers.Drivers;
 public class BaseTest {
 	
 	
+	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	protected void setup() {
+	protected void setup(Object[] data) {
 		
-		Drivers.initDriver();
+		Map<String, String> hmap = (Map<String, String>) data[0];
+	 
+		Drivers.initDriver(hmap.get("browser"));
 	}
 	
 	
